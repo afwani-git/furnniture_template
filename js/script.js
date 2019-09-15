@@ -1,3 +1,4 @@
+
 $(function() {
     $("#coursel-container").owlCarousel({
         items: 1

@@ -25,7 +25,16 @@
     <div class="load">
         <p>loading...</p>
     </div>
-    <div class="shapes"></div>
+    <!-- background -->
+    <div class="hero">
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+    </div>
+    <!-- end bg-->
     <div class="container  container-outer no-margin">
         <div class="row no-gutter">
             <!-- sidebar -->
@@ -163,7 +172,7 @@
         const p2 = new Power2();
         const t1 = new TimelineMax();
         t1.fromTo(".container-outer", 1.6, { y: "800px" }, { y: "0", ease: p2.easeInOut })
-            .fromTo(".sidebar", .7, { height: "0" }, { height: "650px", ease: p2.easeInOut })
+            .fromTo(".sidebar", .7, { height: "0" }, { height: "100%", ease: p2.easeInOut })
             .fromTo(".sidebar-logo", .8, { x: "-20px", opacity: "0" }, { x: "0", opacity: "1", ease: p2.easeIn })
             .fromTo(".sidebar-nav", 1, { x: "-20px", opacity: "0" }, { x: "0", opacity: "1", ease: p2.easeIn }, "-=.3")
             .fromTo(".sidebar-footer", 1, { x: "-20px", opacity: "0" }, { x: "0", opacity: "1", ease: p2.easeIn }, "-=.4")
@@ -171,7 +180,7 @@
             .fromTo(".warpper-content h1", .5, { opacity: "0", x: "-20px" }, { opacity: "1", x: "0", ease: p2.easeIn })
             .fromTo(".warpper-content h4", .5, { opacity: "0", x: "20px" }, { opacity: "1", x: "0", ease: p2.easeIn })
             .fromTo(".warpper-content button", .6, { opacity: "0", y: "20px" }, { opacity: "1", y: "0", ease: p2.easeIn })
-            .fromTo(".shapes", 1, { y: "900px" }, { y: "0", ease: p2.easeOut }, "-=.5")
+        // .fromTo(".shapes", 1, { y: "900px" }, { y: "0", ease: p2.easeOut }, "-=.5")
     });
     </script>
 </body>
