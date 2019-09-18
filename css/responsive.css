@@ -141,15 +141,15 @@
     }
 
     /*items*/
-    .box2 {
+    .box:nth-child(2) {
         flex: 0 0 78.888888%;
         margin: 0 0 10px 0;
         order: 1;
     }
-    .box4 {
+    .box:nth-child(4) {
         margin: 0 0 0 0;
     }
-    .box5 {
+    .box:nth-child(5) {
         flex: 0 0 20%;
         margin: 0 0 0 0;
     }
@@ -357,17 +357,17 @@
         padding: 10px 25px;
     }
 
-    .box2 {
+    .box:nth-child(2) {
         flex: 0 0 78.888888%;
         margin: 0 0 10px 0;
         order: 1;
     }
 
-    .box4 {
+    .box:nth-child(4) {
         margin: 0 0 0 0;
     }
 
-    .box5 {
+    .box:nth-child(5) {
         flex: 0 0 20%;
         margin: 0 0 0 0;
     }
@@ -620,29 +620,9 @@
     #items {
         padding: 20px 10px;
     }
-    .box1{
-        flex:0 0 100%;
-        margin:0;
-        margin-bottom: 10px;
-    }
-    .box2{
-        flex:0 0 100%;
-        margin:0;
-        margin-bottom: 10px;
-    }
-    .box3{
-        flex:0 0 100%;
-        margin:0;
-        margin-bottom: 10px;
-    }
-    .box4{
-        flex:0 0 100%;
-        margin:0;
-        margin-bottom: 10px;
-    }
-    .box5{
-        flex:0 0 100%;
-        margin:0;
-        margin-bottom: 10px;
+    .box{
+        flex:0 0 100%!important;
+        margin:0!important;
+        margin-bottom: 10px!important;
     }
 }
