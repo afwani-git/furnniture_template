@@ -803,49 +803,44 @@ p {
 }
 
 /*grid*/
-.box1,
-.box2,
-.box3,
-.box4,
-.box5 {
+.box {
     width: 200px;
     height: 200px;
 }
 
-.box1 {
+.box:nth-child(1) {
     flex: 0 0 20%;
     margin: 0 10px 10px 0;
 }
 
-.box2 {
+.box:nth-child(2) {
     flex: 0 0 78.888888%;
     margin: 0 0 10px 0;
 }
 
-.box3 {
+.box:nth-child(3) {
     flex: 0 0 20%;
     margin: 0 10px 0 0;
 }
 
-.box4 {
+.box:nth-child(4) {
     flex: 1 1 55%;
     margin: 0 10px 0 0;
 }
 
-.box5 {
+.box:nth-child(5) {
     flex: 0 0 20%;
 }
 
 /*end grid layout*/
-.box-item-md,
-.box-item-xl,
-.box-item-lg {
+/* box md 1,3,5 */
+/* xl 2  */
+/* lg 4 */
+.box{
     box-sizing: border-box;
     padding: 10px;
     background: white;
-    /*overflow: hidden;*/
     text-align: center;
-    /*box-shadow: var(--shadow1);*/
     border-radius: 6px;
 }
 
@@ -853,17 +848,19 @@ p {
     letter-spacing: 2px;
 }
 
-.box-item-md img {
+
+.box:nth-child(odd) img {
     width: 100px;
     height: 100px;
     display: inline-block;
 }
 
-.info-md-box {
+/* info md box */
+.box:nth-child(odd) .info {
     padding: 3px 5px;
 }
 
-.info-md-box>.title-info {
+.box:nth-child(odd) .info>.title-info {
     color: black;
     margin: 2px 0 0 0;
     font-size: 15px;
@@ -872,40 +869,40 @@ p {
     font-weight: 400;
 }
 
-.info-md-box>.desc-info {
+.box:nth-child(odd) .info>.desc-info {
     color: #dbdbdb;
     font-size: 11px;
     font-weight: 400;
     margin: 0;
 }
 
-.info-md-box>.price-info {
+.box:nth-child(odd) .info>.price-info {
     color: var(--dark-blue);
     margin: 5px 0 0 0;
     font-size: 11px;
     font-weight: 700;
 }
 
-.box-item-xl>.row,
-.box-item-xl>.row>[class*=col],
-.box-item-lg>.row,
-.box-item-lg>.row>[class*=col] {
+.box:nth-child(2)>.row,
+.box:nth-child(2)>.row>[class*=col],
+.box:nth-child(4)>.row,
+.box:nth-child(4)>.row>[class*=col] {
     height: 100%;
 }
 
-.box-item-xl img,
-.box-item-lg img {
+.box:nth-child(2) img,
+.box:nth-child(4) img {
     height: 100%;
     width: 100%;
     display: block;
 }
 
 /*box xl*/
-.box-item-xl .info-xl-box {
+.box:nth-child(2) .info {
     margin: 40px 0 0 20px;
 }
 
-.box-item-xl .info-xl-box .title-info {
+.box:nth-child(2) .info .title-info {
     font-size: 25px;
     font-weight: 400;
     text-transform: uppercase;
@@ -914,14 +911,14 @@ p {
     margin-bottom: 10px;
 }
 
-.box-item-xl .info-xl-box .desc-info {
+.box:nth-child(2) .info .desc-info {
     font-size: 15px;
     font-weight: 400;
     color: #dbdbdb;
     margin: 0;
 }
 
-.box-item-xl .info-xl-box .price-info {
+.box:nth-child(2) .info .price-info {
     color: var(--dark-blue);
     font-weight: bold;
     font-size: 18px;
@@ -930,12 +927,12 @@ p {
 
 /*end box xl*/
 /*box lg*/
-.box-item-lg .info-lg-box {
+.box:nth-child(4) .info {
     margin-left: 25px;
     margin-top: 50px;
 }
 
-.box-item-lg .info-lg-box .title-info {
+.box:nth-child(4) .info .title-info {
     font-size: 23px;
     font-weight: 400;
     letter-spacing: 2px;
@@ -943,13 +940,13 @@ p {
     margin: 0;
 }
 
-.box-item-lg .info-lg-box .desc-info {
+.box:nth-child(4) .info .desc-info {
     font-size: 13px;
     color: #dbdbdb;
     margin: 0;
 }
 
-.box-item-lg .info-lg-box .price-info {
+.box:nth-child(4) .info .price-info {
     font-size: 20px;
     font-weight: bold;
     color: var(--dark-blue);
