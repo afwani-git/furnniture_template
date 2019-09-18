@@ -1,9 +1,6 @@
-
-$(function() {
-    $("#coursel-container").owlCarousel({
-        items: 1
-    });
-})
+$("#coursel-container").owlCarousel({
+    items: 1
+});
 $(function() {
     $(".list-item .item").on("mouseenter", function() {
         $(".recomended-heading h5").css('color', 'var(--dark-blue)');
@@ -36,11 +33,12 @@ $(function() {
     let hidden = true;
     $("#search").on("click", function(e) {
         e.preventDefault();
-        if (hidden) {
-            $("#coursel-container").slideUp("1000");
-        } else {
-            $("#coursel-container").slideDown('1000');
-        }
-        hidden = !hidden;
+        $(".search").toggle("flex");
     })
 })
+$(function() {
+    $(".all-items > div").on("click", function(e) {
+        e.preventDefault();
+        $(this).removeClass('transition-fade').addClass('transition-item');
+    });
+});
