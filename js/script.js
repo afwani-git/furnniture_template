@@ -18,22 +18,14 @@ $(function() {
     });
 })
 $(function() {
-    $(".menu-container").hide();
-    let hidden = true;
     $("#menu").on("click", function() {
-        if (hidden) {
-            $(".menu-container").slideToggle();
-        } else {
-            $(".menu-container").slideToggle();
-        }
-        hidden = !hidden;
+            $(".menu-container").slideToggle().css("display","flex");
     });
 })
 $(function() {
-    let hidden = true;
     $("#search").on("click", function(e) {
         e.preventDefault();
-        $(".search").toggle("flex");
+        $(".search").slideToggle().css("display","flex");
     })
 })
 $(function() {
