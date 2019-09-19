@@ -29,7 +29,7 @@ $(function() {
     })
 })
 $(function() {
-    $(".all-items > div").on("click", function(e) {
+    $(".all-items > a").on("click", function(e) {
         e.preventDefault();
         $(this).removeClass('transition-fade').addClass('transition-item');
     });
