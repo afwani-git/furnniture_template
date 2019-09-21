@@ -167,7 +167,9 @@ p {
 .sidebar-nav .items-nav li a svg path {
     fill: var(--gary-color1);
 }
-
+.active-path{
+    fill:red!important;
+}
 .sidebar-nav .items-nav li:hover svg path {
     fill: var(--dark-blue);
 }
@@ -828,6 +830,7 @@ p {
 }
 .box:hover,
 .box{
+    color: black;
     text-decoration: none;
 }
 .box > .row{
