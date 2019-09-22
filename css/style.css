@@ -28,7 +28,7 @@ p {
 }
 
 .load {
-    background: #dbdbdb;
+    background: white;
     position: absolute;
     left: 0;
     top: 0;
@@ -38,8 +38,41 @@ p {
     display: grid;
 }
 
-.load p {
-    margin: auto;
+.lds-ring {
+  display: block;
+  position: relative;
+  margin:auto;
+  width: 64px;
+  height: 64px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 6px solid rgb(0, 35, 255);
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: rgb(0, 35, 255) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 
@@ -168,7 +201,7 @@ p {
     fill: var(--gary-color1);
 }
 .active-path{
-    fill:red!important;
+    fill:var(--dark-blue)!important;
 }
 .sidebar-nav .items-nav li:hover svg path {
     fill: var(--dark-blue);
@@ -1008,6 +1041,59 @@ p {
     margin-top: 66px;
     padding: 20px;
     text-align: center;
+}
+/*bucket component*/
+#bucket{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.heading-bucket{
+    margin: 10px 0 20px 0;
+}
+.heading-bucket .row [class*=col-] h2{
+    display: inline-block;
+    font-weight: 300;
+    border-bottom: 1px solid black;
+}
+.heading-bucket .row [class*=col-]{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.heading-bucket .row [class*=col-] span > svg > path{
+    fill: #dbdbdb;
+}
+.table-bucket table thead tr{
+    background: #dbdbdb;
+}
+.table-bucket table thead tr th{
+    text-align: center;
+}
+.table-bucket table tbody tr td{
+    text-align: center;
+    vertical-align: middle;
+}
+.table-bucket table tbody tr td:nth-child(2) img{
+    display: inline-block;
+}
+.table-bucket table tbody tr td p{
+    margin: 0;
+}
+.action-bucket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.action-bucket i{
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 10px;
+    color: var(--dark-blue);
+    transition: .1s ease;
+}
+.action-bucket i:hover{
+   transform:translateY(-3px);
 }
 
 /*transition page*/
