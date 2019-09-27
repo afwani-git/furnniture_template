@@ -1043,7 +1043,7 @@ p {
     text-align: center;
 }
 /*bucket component*/
-#bucket{
+.bucket-warpper{
     margin-top: 20px;
     margin-left: 30px;
 }
@@ -1060,7 +1060,7 @@ p {
     justify-content: space-between;
     align-items: center;
 }
-.heading-bucket .row [class*=col-] span > svg > path{
+.heading-bucket .row [class*=col-] > span > svg > path{
     fill: #dbdbdb;
 }
 .table-bucket table thead tr{
@@ -1078,6 +1078,7 @@ p {
 }
 .table-bucket table tbody tr td p{
     margin: 0;
+    display: inline-block;
 }
 .action-bucket {
     display: flex;
@@ -1095,13 +1096,69 @@ p {
 .action-bucket i:hover{
    transform:translateY(-3px);
 }
-
+/*CARD*/
+.card {
+    margin: 0 10px 20px 0;
+    padding: 10px;
+    /*====================*/
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem
+}
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem
+}
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, .03);
+    border-bottom: 1px solid rgba(0, 0, 0, .125)
+}
+.card-total .card-header{
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-align:center;
+}
+.card-total .card-body p{
+    margin:10px 0 10px 0;
+    font-weight: 600;
+    text-align:center;
+    font-size: 20px;
+}
+.button-action-chart{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
 /*transition page*/
 .transition-fade{
     position: relative;
     top: 0;
     opacity: 1;
     transition: top 1s  ,opacity 1s,transform .3s;
+}
+.transition-fade-left{
+    position: relative;
+    left: 0;
+    opacity: 1;
+    transition: 1s;
+}
+.transition-fade-right{
+    position: relative;
+    right: 0;
+    opacity: 1;
+    transition: 1s;
 }
 .transition-item{
     position: relative;
@@ -1122,5 +1179,13 @@ html.is-animating .transition-fade{
 }
 html.is-leaving .transition-item{
     top: -500px;
+    opacity: 0;
+}
+html.is-animating .transition-fade-left{
+    left: 200px;
+    opacity: 0;
+}
+html.is-animating .transition-fade-right{
+    right: 200px;
     opacity: 0;
 }
