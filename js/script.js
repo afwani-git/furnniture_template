@@ -115,7 +115,6 @@ function init() {
     })
 
     function templateIntem(data, num) {
-        // debugger;
         result = "";
         num = 1;
         data.items.map(data => {
@@ -163,9 +162,7 @@ function init() {
         $("#total").html(`<i class="fa fa-usd"></i>${total}`);
     }
     $(function() {
-        $(".action-bucket > .fa.fa-minus-circle").on("click", function() {
-
-        })
+        // sengaja beda :v
         const table = document.querySelector(".table-bucket");
         if (table !== null) {
             table.addEventListener("click", (evt) => {
@@ -190,7 +187,22 @@ function init() {
                     updateBucket();
                     updateTotal();
                 }else if(evt.target.classList[1] === "fa-plus-circle"){
-                    console.log('comming soon ea :)');
+                	const getName = evt.target.parentElement.parentElement.parentElement
+                                    .children[1].children[1].textContent;
+                    let data = JSON.parse(localStorage.chart);
+                    data.items.map(prod => {
+                        if (prod.title === getName) {
+                            prod.qty++;
+                            prod.newPrice += prod.price;
+                            evt.target.parentElement.parentElement.parentElement
+                                .children[3].textContent = `${prod.qty}X`;
+                            evt.target.parentElement.parentElement.parentElement
+                                .children[2].children[0].textContent = `$${prod.newPrice}`;
+                        }
+                    });
+                    localStorage.setItem("chart", JSON.stringify(data));
+                    updateBucket();
+                    updateTotal();
                 }
             })
         } else {
